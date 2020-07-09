@@ -17,7 +17,8 @@ export default function ListPeople(props) {
        .then(
          async(result) => {
            for(var i=0;i<result.characters.length;i++){
-             const response = await fetch(result.characters[i].replace('http:', 'https:'));
+             const link = result.characters[i].replace('http:', 'https:')
+             const response = await fetch(link);
              const json = await response.json();
              li.push(json.name);
            }
