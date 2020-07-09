@@ -6,8 +6,8 @@ export default function Roster() {
     return (
       <div>
         <Router>
-          <Route exact path='/movie' component={ListMovies}/>
-          <Route path='/movie/:title/:date/:number' component={ListPeople}/>
+          <Route exact path='/' component={ListMovies}/>
+          <Route path='/:title/:date/:number' component={ListPeople}/>
         </Router>
       </div>
     );
