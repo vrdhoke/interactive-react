@@ -17,7 +17,7 @@ export default function ListPeople(props) {
        .then(
          async(result) => {
            for(var i=0;i<result.characters.length;i++){
-             const response = await fetch(result.characters[i]);
+             const response = await fetch(result.characters[i].replace('http:', 'https:'));
              const json = await response.json();
              li.push(json.name);
            }
@@ -33,25 +33,7 @@ export default function ListPeople(props) {
     fetchData();    
   },[filmId])
   
-//   var fetchData= async() => {
-//     await fetch('https://swapi.dev/api/films/'+id+'/')
-//      .then(res => res.json())
-//      .then(
-//        async(result) => {
-//          for(var i=0;i<result.characters.length;i++){
-//            const response = await fetch(result.characters[i]);
-//            const json = await response.json();
-//            li.push(json.name);
-//          }
-//          setIsLoaded(true);
-//          setItems(li);
-//        },
-//        (error) => {
-//          setIsLoaded(true);
-//          setError(error);
-//        }
-//      )
-//  }
+
 
    
   if (error) {
