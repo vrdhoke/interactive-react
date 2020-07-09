@@ -1,7 +1,7 @@
 .App {
   text-align: center;
+  color: black;
 }
-
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -12,9 +12,18 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
+@media only screen and (max-width: 1024px) {
 
+  /* header styles
+ ------------------------------------------------------------------ */
+ .App-header {
+    font: 80px/1.1em 'opensans-bold', sans-serif;
+    
+ }
+
+}
 .App-header {
-  background-color: #282c34;
+  background-color: black;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -22,6 +31,9 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  background-image: url("https://i.stack.imgur.com/UJur5.png");
+  background-repeat: no-repeat;
+  background-size: 700px 500px;
 }
 
 .App-link {

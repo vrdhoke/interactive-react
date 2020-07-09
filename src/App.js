@@ -1,11 +1,14 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-import Main from './Main';
+import Main from './Components/Main';
+import StarWarImg from './Components/StarWarImg';
+
+
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
+    <div className="App" >
+      <header className="App-header" >
+        <StarWarImg />
         <Main />
       </header>
     </div>

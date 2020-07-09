@@ -1,5 +1,5 @@
 import React from 'react';
-import {BrowserRouter as Router, Link, Route,Switch} from 'react-router-dom'
+import {BrowserRouter as Router, Route} from 'react-router-dom'
 import ListMovies from './ListMovies'
 import ListPeople from './ListPeople'
 export default function Roster() {
