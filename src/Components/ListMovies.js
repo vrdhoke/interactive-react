@@ -37,32 +37,6 @@ export default function Movies() {
       fetchMovies();
     },[])
   
-    // var fetchMovies = async() => {
-    //   await fetch("https://swapi.dev/api/films/")
-    //     .then(res => res.json())
-    //     .then(
-    //       (result) => {
-    //         setIsLoaded(true);
-    //         var temp;
-    //         for (var i = 0; i < result.results.length; i++) 
-    //         {
-    //         for (var j = i + 1; j < result.results.length; j++) { 
-    //             if (result.results[i].release_date.substring(0, 4) > result.results[j].release_date.substring(0, 4)) 
-    //             {
-    //                 temp = result.results[i];
-    //                 result.results[i] = result.results[j];
-    //                 result.results[j] = temp;
-    //             }
-    //           }
-    //         }
-    //         setItems(result.results);
-    //       },
-    //       (error) => {
-    //         setIsLoaded(true);
-    //         setError(error);
-    //       }
-    //     )
-    // }
 
     if (error) {
       return <div>Error: {error.message}</div>;
@@ -75,7 +49,7 @@ export default function Movies() {
           <h3 className="ColorM">MOVIES</h3>
           {items.map((item,i) => (
           <div key={i}>
-          <h4 ><Link className="MText" to={`/movie/${item.title}/${item.release_date}/${item.episode_id}`}><Movie movie={item}/></Link></h4>
+          <h4 ><Link className="MText" to={`/interactive-react/${item.title}/${item.release_date}/${item.episode_id}`}><Movie movie={item}/></Link></h4>
           </div>
           ))}
         </ul>
